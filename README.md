@@ -12,6 +12,7 @@ This project is set to create a reddit-like app, to hold similar functionality a
 6. me :(
 
 ## wireframe
+![image](https://user-images.githubusercontent.com/109679966/214528272-1441997e-8a3a-4db2-b325-b359754056a0.png)
 
 
 ## Functionality
