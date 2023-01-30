@@ -15,7 +15,7 @@ const subRedditSlice = createSlice({
             state.isLoading = true;
             state.error = false;
         },
-        getSubredditsSuccess(state, action) {
+        getSubRedditsSuccess(state, action) {
             state.subReddits = action.payload;
             state.isLoading = false;
         },
@@ -28,7 +28,7 @@ const subRedditSlice = createSlice({
 
 export const {
     startGetSubReddits,
-    getSubredditsSuccess,
+    getSubRedditsSuccess,
     getSubRedditsRejected
 } = subRedditSlice.actions;
 
@@ -38,7 +38,7 @@ export const fetchSubReddits = () => async (dispatch) => {
     try {
         dispatch(startGetSubReddits());
         const subReddits = await getSubreddits();
-        dispatch(getSubredditsSuccess(subReddits));
+        dispatch(getSubRedditsSuccess(subReddits));
     } catch (error) {
         dispatch(getSubRedditsRejected());
     }
