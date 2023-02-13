@@ -7,7 +7,7 @@ import {
     TiArrowDownOutline,
     TiArrowDownThick,
     TiMessage
-} from 'react-icoms/ti';
+} from 'react-icons/ti';
 import moment from 'moment';
 import shortenNumber from '../../util';
 import Card from '../../components/Card/Card';
