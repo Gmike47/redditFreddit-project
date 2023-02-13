@@ -4,13 +4,13 @@ import { AnimatedList } from 'react-animated-list';
 import Post from '../post/Post';
 import PostLoading from '../post/PostLoading';
 import { getRandomNumber } from '../../util/numUtils';
-import { fetchPost, selectFilterPosts, setSearchTerm, fetchComments } from '../../store/redditSlice';
+import { fetchPost, selectFilteredPosts, setSearchTerm, fetchComments } from '../../store/redditSlice';
 import './Home.css';
 
 const Home = () => {
     const reddit = useSelector((state) => state.reddit);
     const { isLoading, error, searchTerm, subReddit } = reddit;
-    const posts = useSelector(selectFilterPosts);
+    const posts = useSelector(selectFilteredPosts);
     const dispatch = useDispatch();
 
     useEffect(() => {
