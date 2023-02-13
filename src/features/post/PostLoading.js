@@ -3,7 +3,7 @@ import Skeleton from 'react-loading-skeleton';
 import './Post.css';
 import './PostLoading.css';
 import { TiArrowUpOutline, TiArrowDownOutline, TiMessage } from 'react-icons/ti';
-import getRandomNumber from '../../util/numUtils';
+import { getRandomNumber } from '../../util/numUtils';
 
 const PostLoading = () => {
     return (

@@ -4,7 +4,7 @@ import { AnimatedList } from 'react-animated-list';
 import Post from '../post/Post';
 import PostLoading from '../post/PostLoading';
 import { getRandomNumber } from '../../util/numUtils';
-import { fetchPost, selectFilteredPosts, setSearchTerm, fetchComments } from '../../store/redditSlice';
+import { fetchPosts, selectFilteredPosts, setSearchTerm, fetchComments } from '../../store/redditSlice';
 import './Home.css';
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchPost(subReddit));
+        dispatch(fetchPosts(subReddit));
     }, [subReddit]);
 
     const onToggleComments = (index) => {
@@ -37,7 +37,7 @@ const Home = () => {
         return (
             <div className="error">
                 <h2>Failed to load posts</h2>
-                <button type="button" onClick={() => dispatch(fetchPost(subReddit))}>
+                <button type="button" onClick={() => dispatch(fetchPosts(subReddit))}>
                     Give it another go ;)
                 </button>
             </div>

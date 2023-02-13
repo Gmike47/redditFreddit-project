@@ -9,7 +9,7 @@ import {
     TiMessage
 } from 'react-icons/ti';
 import moment from 'moment';
-import shortenNumber from '../../util';
+import { shortenNumber } from '../../util/numUtils';
 import Card from '../../components/Card/Card';
 import Commnet from '../Comment/Comment';
 import ProfilePic from '../PP/ProfilePic';
