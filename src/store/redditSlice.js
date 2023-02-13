@@ -6,7 +6,7 @@ const initialState = {
     error: false,
     isLoading: false,
     serachTerm: '',
-    subReddit: 'r/whenthe'
+    subReddit: '/r/whenthe/',
 };
 
 const redditSlice = createSlice({
