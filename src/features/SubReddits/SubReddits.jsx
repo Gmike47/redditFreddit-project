@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Card from '../../components/Card/Card';
 import { fetchSubReddits, selectSubReddits } from '../../store/subRedditSlice';
 import './SubReddits.css';
-import { setSubReddit, selectSelectedSubreddit } from '../../store/redditSlice';
+import { setSelectedSubreddit, selectSelectedSubreddit } from '../../store/redditSlice';
 
 const SubReddits = () => {
     const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const SubReddits = () => {
                     >
                         <button
                         type="button"
-                        onClick={() => dispatch(setSubReddit(subreddit.url))}
+                        onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}
                         >
                             <img
                             src={subreddit.icon_img || `https://api.adorable.io/avatars/25/${subreddit.display_name}`}
