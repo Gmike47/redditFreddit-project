@@ -6,11 +6,11 @@ const initialState = {
     error: false,
     isLoading: false,
     serachTerm: '',
-    subReddit: '/r/whenthe/',
+    selectedSubreddit: '/r/pics/',
 };
 
 const redditSlice = createSlice({
-    name: 'redditSlice',
+    name: 'redditPosts',
     initialState,
     reducers: {
         setPosts(state, action) {
@@ -31,8 +31,8 @@ const redditSlice = createSlice({
           setSearchTerm(state, action) {
             state.searchTerm = action.payload;
           },
-          setSubReddit(state, action) {
-            state.subReddit = action.payload;
+          setSelectedSubreddit(state, action) {
+            state.selectedSubreddit = action.payload;
             state.searchTerm = '';
           },
           toggleShowingComments(state, action) {
@@ -56,7 +56,7 @@ const redditSlice = createSlice({
             state.posts[action.payload].loadingComments = false;
             state.posts[action.payload].error = true;
           },
-    }
+    },
 });
 
 export const {
@@ -65,7 +65,7 @@ export const {
   getPostsSuccess,
   startGetPosts,
   setSearchTerm,
-  setSubReddit,
+  setSelectedSubreddit,
   toggleShowingComments,
   getCommentsFailed,
   getCommentsSuccess,
