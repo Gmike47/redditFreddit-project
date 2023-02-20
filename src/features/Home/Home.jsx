@@ -37,7 +37,7 @@ const Home = () => {
         return (
             <div className="error">
                 <h2>Failed to load posts</h2>
-                <button type="button" onClick={() => dispatch(fetchPosts(subReddit))}>
+                <button type="button" onClick={() => dispatch(fetchPosts(selectedSubreddit))}>
                     Give it another go ;)
                 </button>
             </div>
