@@ -9,13 +9,13 @@ import './Home.css';
 
 const Home = () => {
     const reddit = useSelector((state) => state.reddit);
-    const { isLoading, error, searchTerm, subReddit } = reddit;
+    const { isLoading, error, searchTerm, selectedSubreddit } = reddit;
     const posts = useSelector(selectFilteredPosts);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchPosts(subReddit));
-    }, [subReddit]);
+        dispatch(fetchPosts(selectedSubreddit));
+    }, [selectedSubreddit]);
 
     const onToggleComments = (index) => {
         const getComments = (permalink) => {
