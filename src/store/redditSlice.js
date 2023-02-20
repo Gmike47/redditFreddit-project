@@ -5,7 +5,7 @@ const initialState = {
     posts: [],
     error: false,
     isLoading: false,
-    serachTerm: '',
+    searchTerm: '',
     selectedSubreddit: '/r/pics/',
 };
 
@@ -16,30 +16,30 @@ const redditSlice = createSlice({
         setPosts(state, action) {
             state.posts = action.payload;
         },
-        getPostsStart(state) {
+        startGetPosts(state) {
             state.isLoading = true;
             state.error = false;
         },
         getPostsSuccess(state, action) {
             state.isLoading = false;
             state.posts = action.payload;
-          },
-          getPostsFailed(state) {
+        },
+        getPostsFailed(state) {
             state.isLoading = false;
             state.error = true;
-          },
-          setSearchTerm(state, action) {
+        },
+        setSearchTerm(state, action) {
             state.searchTerm = action.payload;
-          },
-          setSelectedSubreddit(state, action) {
+        },
+        setSelectedSubreddit(state, action) {
             state.selectedSubreddit = action.payload;
             state.searchTerm = '';
-          },
-          toggleShowingComments(state, action) {
+        },
+        toggleShowingComments(state, action) {
             state.posts[action.payload].showingComments = !state.posts[action.payload]
                .showingComments;
-          },
-          startGetComments(state, action) {
+        },
+        startGetComments(state, action) {
             state.posts[action.payload].showingComments = !state.posts[action.payload]
               .showingComments;
             if (!state.posts[action.payload].showingComments) {
@@ -47,23 +47,23 @@ const redditSlice = createSlice({
             }
             state.posts[action.payload].loadingComments = true;
             state.posts[action.payload].error = false;
-          },
-          getCommentsSuccess(state, action) {
+        },
+        getCommentsSuccess(state, action) {
             state.posts[action.payload.index].loadingComments = false;
             state.posts[action.payload.index].comments = action.payload.comments;
-          },
-          getCommentsFailed(state, action) {
+        },
+        getCommentsFailed(state, action) {
             state.posts[action.payload].loadingComments = false;
             state.posts[action.payload].error = true;
-          },
+        },
     },
 });
 
 export const {
   setPosts,
+  startGetPosts,
   getPostsFailed,
   getPostsSuccess,
-  startGetPosts,
   setSearchTerm,
   setSelectedSubreddit,
   toggleShowingComments,
