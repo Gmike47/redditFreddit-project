@@ -72,6 +72,7 @@ const Post = (props) => {
                 </div>
             );
         }
+        
         if (post.showingComments) {
             return (
                 <div>
