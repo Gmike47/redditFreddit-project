@@ -1,14 +1,17 @@
 .subreddit-card {
-    padding-right: var(--spacing-2);
+    position: fixed;
+    margin-top: 3.37rem;
+    background-color: white;
 }
   
-.subreddit-card h2 {
-    margin-top: 0;
-    color: var(--color-text-header);
+
+h2 {
+    margin-left: 2rem;
+    font-size: 1.5rem;
 }
   
-.subreddit-card button {
-    background: none;
+.subreddits-buttons {
+    background: white;
     border: none;
     display: flex;
     align-items: center;
@@ -29,18 +32,21 @@
     background: var(--color-branding-transparent);
 }
   
-.subreddit-card button:hover {
+button:hover {
     background: var(--color-on-hover);
+    cursor: pointer;
 }
   
 .subreddits-list {
     list-style: none;
     padding: 0;
+    margin-left: 1rem;
+    width: auto;
 }
   
 .subreddit-icon {
-    height: 25px;
-    width: 25px;
+    height: 16px;
+    width: 16px;
     border-radius: 50%;
     margin-right: var(--spacing-1);
 }

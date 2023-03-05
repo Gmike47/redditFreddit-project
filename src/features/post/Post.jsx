@@ -90,42 +90,39 @@ const Post = (props) => {
         <article key={post.id}>
             <Card >
             <div className="post-wrapper">
-                <div className="post-votes-container">
-                    <button
-                    type="button"
-                    className={`icon-action-button-up-vote ${
-                        voteValue === 1 && 'active'
-                    }`}
-                    onClick={() => onHandleVote(1)}
-                    aria-label="Up vote"
-                    >
-                        {renderUpvote()}
-                    </button>
-                    <p className={`post-vote-value ${getVoteType()}`}>
-                        {shortenNumber(post.ups, 1)}
-                    </p>
-                    <button
-                    type="button"
-                    className={`icon-action-button-down-vote ${
-                        voteValue === -1 && 'active'
-                    }`}
-                    onClick={() => onHandleVote(-1)}
-                    aria-label="Down vote"
-                    >
-                        {renderDownvote()}
-                    </button>
-                </div>
                 <div className="post-container">
+                    <span className="author-details">
+                        <ProfilePic name={post.author} />
+                        <span className="author-username">posted by: {post.author} {moment.unix(post.created_utc).fromNow()}</span>
+                    </span>
                     <h3 className="post-title">{post.title}</h3>
                     <div className="post-image-container">
                         <img src={post.url} alt="" className="post-image" />
                     </div>
-                    <div className="post-details">
-                        <span className="author-details">
-                            <ProfilePic name={post.author} />
-                            <span className="author-username">{post.author}</span>
-                        </span>
-                        <span>{moment.unix(post.created_utc).fromNow()}</span>
+                    <div className="post-votes-container">
+                        <button
+                        type="button"
+                        className={`icon-action-button-up-vote ${
+                            voteValue === 1 && 'active'
+                        }`}
+                        onClick={() => onHandleVote(1)}
+                        aria-label="Up vote"
+                        >
+                            {renderUpvote()}
+                        </button>
+                        <p className={`post-vote-value ${getVoteType()}`}>
+                            {shortenNumber(post.ups, 1)}
+                        </p>
+                        <button
+                        type="button"
+                        className={`icon-action-button-down-vote ${
+                            voteValue === -1 && 'active'
+                        }`}
+                        onClick={() => onHandleVote(-1)}
+                        aria-label="Down vote"
+                        >
+                            {renderDownvote()}
+                        </button>
                         <span className="post-comments-container">
                             <button
                             type="button"

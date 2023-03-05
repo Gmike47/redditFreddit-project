@@ -15,7 +15,8 @@ const SubReddits = () => {
     }, [dispatch]);
 
     return (
-        <Card className="subreddit-card" >
+        <div className="subreddit-card">
+        <Card className="subreddit-card">
             <h2>subreddits</h2>
             <ul className="subreddits-list">
                 {subreddits.map((subreddit) => (
@@ -24,6 +25,7 @@ const SubReddits = () => {
                     className={`${selectedSubreddits === subreddit.url && 'selected-subreddit'}`}
                     >
                         <button
+                        className="subreddits-buttons"
                         type="button"
                         onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}
                         >
@@ -39,6 +41,7 @@ const SubReddits = () => {
                 ))}
             </ul>
         </Card>
+        </div>
     );
 };
 

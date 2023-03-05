@@ -1,5 +1,8 @@
 .post-wrapper {
     display: flex;
+    justify-content: center;
+    margin-left: 23rem;
+    margin-top: 5rem;
   }
   
   .post-container {
@@ -43,8 +46,9 @@
   
   .post-votes-container {
     display: flex;
-    flex-direction: column;
+    flex-flow: row nowrap;
     align-items: center;
+    justify-content: flex-start;
   }
   
   .icon-action {
@@ -113,3 +117,10 @@
     color: var(--color-branding);
   }
   
+  .icon-action-button-up-vote {
+    width: 5%;
+  }
+
+  .icon-action-button-down-vote {
+    width: 5%;
+  }

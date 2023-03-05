@@ -41,6 +41,7 @@ const Header = () => {
                     <HiOutlineSearch />
                 </button>
             </form>
+            <p className="login" title="pliz don't click, it doesn't work">Log In</p>
         </header>
     );
 };
