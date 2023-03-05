@@ -33,7 +33,7 @@
 
 html,
 body {
-  background: var(--color-background);
+  background: #c7d0d8;
   color: var(--color-text-body);
 }
 
