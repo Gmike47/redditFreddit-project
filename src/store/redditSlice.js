@@ -61,9 +61,9 @@ const redditSlice = createSlice({
 
 export const {
   setPosts,
-  startGetPosts,
   getPostsFailed,
   getPostsSuccess,
+  startGetPosts,
   setSearchTerm,
   setSelectedSubreddit,
   toggleShowingComments,
