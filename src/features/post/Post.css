@@ -1,8 +1,17 @@
 .post-wrapper {
     display: flex;
     justify-content: center;
-    margin-left: 23rem;
-    margin-top: 5rem;
+    margin-left: 40%;
+    margin-top: 0.5rem;
+    background-color: whitesmoke;
+    padding: 1rem 0;
+    box-shadow: 2px 2px 2px #bfbfbf;
+    border-radius: 4px;
+    width: 55%;
+  }
+
+  .post-wrapper:hover {
+    border: 0.2px solid #16161d;
   }
   
   .post-container {
@@ -11,6 +20,7 @@
   
   .post-details {
     margin-top: var(--spacing-2);
+    margin-left: 1rem;
     border-top: 1px solid var(--color-border);
     padding-top: var(--spacing-1);
     font-size: 0.75rem;
@@ -27,7 +37,6 @@
   .post-image-container {
     width: 100%;
     overflow: hidden;
-    border-radius: var(--radius-2);
   }
   
   .post-image-container .post-image {
@@ -35,7 +44,7 @@
   }
   
   .post-title {
-    margin: 0;
+    margin-left: 3%;
     margin-bottom: var(--spacing-2);
     color: var(--color-text-header);
   }
@@ -106,6 +115,7 @@
   
   .post-comments-container .icon-action {
     margin-right: var(--spacing-0);
+    padding: 0.2rem 0.75rem;
   }
   
   .author-details {
@@ -119,8 +129,10 @@
   
   .icon-action-button-up-vote {
     width: 5%;
+    margin: 0 0.5rem;
   }
 
   .icon-action-button-down-vote {
     width: 5%;
+    margin: 0 0.5rem;
   }
