@@ -130,6 +130,7 @@ const Post = (props) => {
                                 post.showingComments && 'showing-comments'
                             }`}
                             onClick={() => onToggleComments(post.permalink)}
+                            aria-label="Show comments"
                             >
                                 <TiMessage className="icon-action" />
                             </button>
