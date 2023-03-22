@@ -3,6 +3,7 @@ import './App.css';
 import Home from './features/Home/Home';
 import Header from './features/Header/Header';
 import SubReddits from './features/SubReddits/SubReddits';
+import Blurb from './features/blurb/Blurb';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <main>
         <Home />
       </main>
+      <aside>
+        <Blurb />
+      </aside>
     </>
   );
 }
