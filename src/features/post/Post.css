@@ -5,13 +5,13 @@
     margin-top: 0.5rem;
     background-color: whitesmoke;
     padding: 1rem 0;
-    box-shadow: 2px 2px 2px #bfbfbf;
-    border-radius: 4px;
+    box-shadow: 1px 1px 2px #bfbfbf;
+    border-radius: 0.3rem;
     width: 45%;
   }
 
   .post-wrapper:hover {
-    border: 0.2px solid #16161d;
+    box-shadow: 0.2px 0.2px 2px #000000;
   }
   
   .post-container {
@@ -49,15 +49,12 @@
     color: var(--color-text-header);
   }
   
-  .post-votes-container {
-    margin-right: var(--spacing-3);
-  }
-  
-  .post-votes-container {
+  .post-container .post-votes-container {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
+    margin-left: 1rem;
   }
   
   .icon-action {
@@ -66,15 +63,17 @@
   
   .post-votes-container .post-votes-value {
     margin: var(--spacing-1) 0;
-    font-weight: bold;
+    font-weight: bolder ;
   }
   
   .post-votes-value.up-vote {
     color: var(--color-success) !important;
+    font-weight: bolder;
   }
   
   .post-votes-value.down-vote {
     color: var(--color-alert) !important;
+    font-weight: bolder;
   }
   
   .up-vote:hover {
@@ -114,8 +113,7 @@
   }
   
   .post-comments-container .icon-action {
-    margin-right: var(--spacing-0);
-    padding: 0.2rem 0.75rem;
+    padding: 0.35rem 0.6rem;
   }
   
   .author-details {
@@ -128,11 +126,13 @@
   }
   
   .icon-action-button-up-vote {
-    width: 5%;
+    width: 8%;
     margin: 0 0.5rem;
+    margin-top: 0.3rem;
   }
 
   .icon-action-button-down-vote {
-    width: 5%;
+    width: 8%;
     margin: 0 0.5rem;
+    margin-top: 0.3rem;
   }

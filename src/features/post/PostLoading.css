@@ -2,7 +2,7 @@
     width: 2ch !important;
   }
   
-  .post {
+.post {
     display: flex;
     background: var(--color-foreground);
     box-shadow: var(--box-shadow);
@@ -12,4 +12,18 @@
     transition: box-shadow 0.1s ease-in;
     color: var(--color-text-secondary);
     margin-left: 40%;
-  }
+    width: 40%;
+}
+
+.post .icon-action-button-up-vote {
+  width: 3rem;
+}
+
+.post .icon-action-button-down-vote {
+  width: 3rem;
+}
+
+.post .post-details {
+  display: flex;
+  justify-content: flex-start;
+}

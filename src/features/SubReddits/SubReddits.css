@@ -2,12 +2,14 @@
     position: fixed;
     margin-top: 3.37rem;
     background-color: white;
+    height: 96%;
+    overflow: scroll;
 }
   
 
-h2 {
-    margin-left: 2rem;
+.subreddit-card h2 {
     font-size: 1.5rem;
+    margin-left: 2rem;
 }
   
 .subreddits-buttons {
@@ -45,8 +47,8 @@ button:hover {
 }
   
 .subreddit-icon {
-    height: 16px;
-    width: 16px;
+    height: 1.5rem;
+    width: 1.5rem;
     border-radius: 50%;
     margin-right: var(--spacing-1);
 }

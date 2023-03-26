@@ -1,11 +1,11 @@
 import './Blurb.css';
 import cakey from './icons8-cake-48.png';
 import dropicon from './pngegg.png';
-import upicon from './upicon.png'
-import hahand from './hahand.png'
+import upicon from './upicon.png';
+import hahand from './hahand.png';
 
 const Blurb = () => {
-
+    
     const drop1 = () => {
         let arr = document.getElementsByClassName('drop-icon1')[0];
         let arrH5 = document.getElementsByClassName('h5')[0];
