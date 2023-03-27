@@ -7,7 +7,7 @@
     padding: 1rem 0;
     box-shadow: 1px 1px 2px #bfbfbf;
     border-radius: 0.3rem;
-    width: 45%;
+    width: 52%;
   }
 
   .post-wrapper:hover {
@@ -126,13 +126,81 @@
   }
   
   .icon-action-button-up-vote {
-    width: 8%;
+    width: 7%;
     margin: 0 0.5rem;
     margin-top: 0.3rem;
   }
 
   .icon-action-button-down-vote {
-    width: 8%;
+    width: 7%;
     margin: 0 0.5rem;
     margin-top: 0.3rem;
+  }
+
+  @media only screen and (max-width: 1300px) {
+      .icon-action-button-up-vote {
+        width: 9%;
+      } .icon-action-button-down-vote {
+        width: 9%;
+      }
+  }
+
+  @media only screen and (max-width: 1050px) {
+    .post-wrapper {
+      width: 70%;
+      margin-left: 25%;
+      transition: width 0.53s ease-in;
+    } .author-username {
+      font-size: 1.2rem;
+    } .post-title {
+      font-size: 1.2rem;
+    } 
+  }
+
+  @media only screen and (max-width: 900px) {
+    .post-wrapper {
+      width: 80%;
+      margin-left: 27%;
+      transition: width 0.53s ease-in;
+    } .author-username {
+      font-size: 1rem;
+    } .post-title {
+      font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .post-wrapper {
+      width: 85%;
+      margin-left: 23%;
+      transition: width 0.53s ease-in;
+    } .author-username {
+      font-size: 0.8rem;
+    } .post-title {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .icon-action-button-up-vote {
+      width: 10%;
+    } .icon-action-button-down-vote {
+      width: 10%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .icon-action-button-up-vote {
+      width: 12%;
+    } .icon-action-button-down-vote {
+      width: 12%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .icon-action-button-up-vote {
+      width: 15%;
+    } .icon-action-button-down-vote {
+      width: 15%;
+    }
   }

@@ -2,5 +2,10 @@
     border-radius: 50%;
     height: 20px;
     margin-right: var(--spacing-1);
+}
+
+@media only screen and (max-width: 550px) {
+  .avatar-profile-image {
+    height: 0.7rem;
   }
-  
+}

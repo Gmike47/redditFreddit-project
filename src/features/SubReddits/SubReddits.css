@@ -52,3 +52,15 @@ button:hover {
     border-radius: 50%;
     margin-right: var(--spacing-1);
 }
+
+@media only screen and (max-width: 1050px) {
+    .subreddit-card {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .subreddit-card {
+        width: 18%;
+    }
+}
