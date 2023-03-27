@@ -4,25 +4,54 @@
     padding: var(--spacing-2);
     transition: box-shadow 0.1s ease-in;
     border-radius: var(--border-radius);
-  }
+}
   
-  .comment:hover {
+.comment:hover {
     box-shadow: var(--box-shadow);
-  }
+}
   
-  .comment-metadata {
+.comment-metadata {
     display: flex;
     margin-bottom: var(--spacing-2);
     align-items: center;
-  }
+}
   
-  .comment-created-time {
+.comment-created-time {
     margin-left: auto;
     font-style: italic;
-  }
+}
   
-  .comment-author {
+.comment-author {
     font-weight: bold;
     color: var(--color-branding);
+}
+
+.actual-words {
+  line-height: 1.6;
+  border-radius: 0.2rem;
+  font-size: 0.95rem;
+  color: rgb(2, 10, 19);
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 650px) {
+    .actual-words {
+      font-size: 0.85rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+  .actual-words {
+    font-size: 0.75rem;
+  } .comment-created-time {
+    font-size: 0.8rem;
+  } .comment-author {
+    font-size: 0.8rem;
   }
-  
+}
+
+@media only screen and (max-width: 480px) {
+  .actual-words {
+    font-size: 0.68rem;
+  }
+}
