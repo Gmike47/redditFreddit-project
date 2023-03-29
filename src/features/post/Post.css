@@ -194,13 +194,22 @@
       width: 12%;
     } .icon-action-button-down-vote {
       width: 12%;
-    }
+    } 
   }
 
   @media only screen and (max-width: 500px) {
     .icon-action-button-up-vote {
-      width: 15%;
+      width: 12%;
+      padding: 0;
     } .icon-action-button-down-vote {
-      width: 15%;
+      width: 12%;
+      padding: 0;
+    } .post-vote-value {
+      font-size: 0.8rem;
+    } .icon-action {
+      height: 1rem;
+      width: 85%;
+    } .numC {
+      font-size: 0.8rem;
     }
   }

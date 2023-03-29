@@ -27,3 +27,47 @@
   display: flex;
   justify-content: flex-start;
 }
+
+@media only screen and (max-width: 1050px) {
+  .post {
+    margin-left: 23%;
+    width: 65%;
+  } .post .icon-action-button-up-vote {
+    width: 2.5rem;
+  } .post .icon-action-button-down-vote {
+    width: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .post {
+    margin-left: 23%;
+    width: 75%;
+  } .post .icon-action-button-up-vote {
+    width: 2.5rem;
+  } .post .icon-action-button-down-vote {
+    width: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .post {
+    margin-left: 23%;
+    width: 68%;
+  } .post .icon-action-button-up-vote {
+    width: 2.2rem;
+  } .post .icon-action-button-down-vote {
+    width: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .post {
+    margin-left: 23%;
+    width: 65%;
+  } .post .icon-action-button-up-vote {
+    width: 1.5rem;
+  } .post .icon-action-button-down-vote {
+    width: 1.5rem;
+  }
+}

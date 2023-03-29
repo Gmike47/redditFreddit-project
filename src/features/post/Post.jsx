@@ -134,7 +134,7 @@ const Post = (props) => {
                             >
                                 <TiMessage className="icon-action" />
                             </button>
-                            {shortenNumber(post.num_comments, 1)}
+                            <p className="numC">{shortenNumber(post.num_comments, 1)}</p>
                         </span>
                     </div>
                     {renderComments()}
