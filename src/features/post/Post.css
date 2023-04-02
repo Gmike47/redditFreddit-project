@@ -171,8 +171,8 @@
 
   @media only screen and (max-width: 800px) {
     .post-wrapper {
-      width: 85%;
-      margin-left: 23%;
+      width: 110%;
+      margin-left: 13%;
       transition: width 0.53s ease-in;
     } .author-username {
       font-size: 0.8rem;
