@@ -3,10 +3,15 @@ import cakey from './icons8-cake-48.png';
 import dropicon from './pngegg.png';
 import upicon from './upicon.png';
 import hahand from './hahand.png';
+import { useSelector } from 'react-redux';
 
 const Blurb = () => {
+
+    const reddit = useSelector((state) => state.reddit);
+    const { selectedSubreddit } = reddit;
     
     const drop1 = () => {
+
         let arr = document.getElementsByClassName('drop-icon1')[0];
         let arrH5 = document.getElementsByClassName('h5')[0];
 
@@ -44,9 +49,9 @@ const Blurb = () => {
             <div className="about-container">
                 <h2>About Community</h2>
                 <div className="aboutin-container">
-                    <strong>Subreddit community on reddit</strong>
+                    <strong>{selectedSubreddit.slice(1, -1)} community on reddit</strong>
                     <p><img src={cakey} alt="cake" /> Created 21st night of September</p>
-                    <strong>r/Subreddit topics</strong>
+                    <strong>{selectedSubreddit.slice(1, -1)} topics</strong>
                     <div className="links">
                         <p>1st topic</p>
                         <p>2nd topic</p>
@@ -61,7 +66,7 @@ const Blurb = () => {
                 </div>
             </div>
             <div className="rules-container">
-                <h2>r/Subreddit rules</h2>
+                <h2>{selectedSubreddit.slice(1, -1)} rules</h2>
                 <div className='rulesin-container'>
                     <p onClick={drop1} style={{cursor: 'pointer'}} >1.You know the rules  <img src={dropicon} alt="drop arrow" className='drop-icon1'  />
                     <p className='h5' style={{display: 'none', border: 'none'}}>and so do I</p>
