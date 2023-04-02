@@ -4,6 +4,7 @@ import Card from '../../components/Card/Card';
 import { fetchSubReddits, selectSubReddits } from '../../store/subRedditSlice';
 import './SubReddits.css';
 import { setSelectedSubreddit, selectSelectedSubreddit } from '../../store/redditSlice';
+import anchor from './anchor.png'
 
 const SubReddits = () => {
     const dispatch = useDispatch();
@@ -14,7 +15,18 @@ const SubReddits = () => {
         dispatch(fetchSubReddits())
     }, [dispatch]);
 
+    const showMe = () => {
+        const left = document.getElementsByClassName('subreddit-card')[0];
+        if (left.style.display === 'none') {
+            left.style.display = 'block';
+        } else {
+            left.style.display = 'none';
+        }
+    }
+
     return (
+        <div>
+        <img src={anchor} alt="anchor" className="anchor" onClick={showMe} />
         <div className="subreddit-card">
         <Card className="subreddit-card">
             <h2>subreddits</h2>
@@ -41,6 +53,7 @@ const SubReddits = () => {
                 ))}
             </ul>
         </Card>
+        </div>
         </div>
     );
 };

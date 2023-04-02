@@ -53,6 +53,18 @@ button:hover {
     margin-right: var(--spacing-1);
 }
 
+.anchor {
+    height: 1rem;
+    display: none;
+    position: fixed;
+    margin-top: 4rem;
+    margin-left: 0.2rem;
+}
+
+.anchor {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1050px) {
     .subreddit-card {
         display: none;
@@ -62,5 +74,19 @@ button:hover {
 @media only screen and (max-width: 1300px) {
     .subreddit-card {
         width: 18%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .anchor {
+        display: block;
+    } .subreddit-card {
+        width: 55%;
+        margin-top: 6rem;
+    } .subreddit-icon {
+        height: 0.8rem;
+        width: 0.8rem;
+    } .subreddit-card h2 {
+        font-size: 1rem;
     }
 }
