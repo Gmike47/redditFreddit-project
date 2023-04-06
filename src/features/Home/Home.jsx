@@ -27,9 +27,9 @@ const Home = () => {
 
     if (isLoading) {
         return (
-            <AnimatedList animation="zoom">
+            <div>
                 {Array(getRandomNumber(3, 10)).fill(<PostLoading />)}
-            </AnimatedList>
+            </div>
         );
     };
 
