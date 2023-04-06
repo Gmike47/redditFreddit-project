@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { AnimatedList } from 'react-animated-list';
 import Post from '../post/Post';
 import PostLoading from '../post/PostLoading';
 import { getRandomNumber } from '../../util/numUtils';
